@@ -1,0 +1,9 @@
+.practiceRow {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(167, 20, 20, 0.63);
+  margin-bottom: 5px;
+  border-radius: 20px;
+}

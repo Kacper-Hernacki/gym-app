@@ -1,0 +1,31 @@
+.home {
+  background-image: url(../dbBG.png);
+  position: relative;
+  height: 755px;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+.home > h1 {
+  color: rgb(228, 227, 238);
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 5px 5px #000000;
+  margin-bottom: -90px;
+}
+
+.home__window {
+  background-color: rgba(189, 66, 60, 0.8);
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30%;
+  box-shadow: 12px 12px 16px 0 rgb(233, 85, 85) inset,
+    -8px -8px 12px 0 rgba(149, 43, 43, 0.986) inset;
+}

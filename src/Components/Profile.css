@@ -1,0 +1,61 @@
+.profile__avatar {
+  height: 100px !important;
+  width: 100px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.profile__edit {
+  font-size: 40px !important;
+  color: rgb(0, 0, 0) !important;
+  margin-bottom: -70px;
+  margin-left: 280px !important;
+
+  border-radius: 100%;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 0 rgba(214, 91, 91, 0.3) inset,
+    -2px -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.profile__NameRow {
+  background-color: rgba(158, 63, 63, 0.288);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: inset 2px 2px 3px 0 rgba(83, 6, 6, 0.329),
+    inset -2px -2px 3px 0 rgba(80, 3, 3, 0.397);
+}
+
+.profile__maxesRow > h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+}
+
+.profile__maxesRow > h2 {
+  text-align: center;
+}
+
+.profile__maxesContainer {
+  background-color: rgba(158, 63, 63, 0.288);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: inset 2px 2px 3px 0 rgba(83, 6, 6, 0.329),
+    inset -2px -2px 3px 0 rgba(80, 3, 3, 0.397);
+}

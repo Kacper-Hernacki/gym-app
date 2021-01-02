@@ -1,0 +1,41 @@
+.add__container > h1 {
+  text-align: center;
+}
+
+.add__container > .MuiSvgIcon-root {
+  position: absolute;
+  bottom: 40px;
+  font-size: 30px;
+  padding: 7px;
+  width: 80%;
+  margin-left: 8%;
+  margin-right: 12%;
+  background-color: rgba(197, 39, 39, 0.712);
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px 0 rgba(129, 26, 26, 0.3) inset,
+    -2px -2px 3px 0 rgba(119, 4, 4, 0.849) inset;
+  cursor: pointer;
+}
+
+.add__container > input {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(167, 20, 20, 0.63);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.add__container > input::placeholder {
+  color: rgb(253, 253, 253);
+  text-align: center !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  opacity: 0.4;
+}

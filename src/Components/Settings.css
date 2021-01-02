@@ -1,0 +1,109 @@
+.settings > h1 {
+  text-align: center;
+}
+
+.settings__avatar {
+  height: 100px !important;
+  width: 100px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.settings__NameRow {
+  background-color: rgba(158, 63, 63, 0.288);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: inset 2px 2px 3px 0 rgba(83, 6, 6, 0.329),
+    inset -2px -2px 3px 0 rgba(80, 3, 3, 0.397);
+  padding-bottom: 10px;
+}
+
+.settings__nameRowHeaders,
+.settings__nameRowInputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+.settings__maxesRow > h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+}
+
+.settings__maxesRow > h2 {
+  text-align: center;
+}
+
+.settings__maxesContainer {
+  background-color: rgba(158, 63, 63, 0.288);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: inset 2px 2px 3px 0 rgba(83, 6, 6, 0.329),
+    inset -2px -2px 3px 0 rgba(80, 3, 3, 0.397);
+}
+
+.settings__input {
+  width: 80px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(167, 20, 20, 0.63);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.settings__input::placeholder {
+  color: rgb(253, 253, 253);
+  text-align: center !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+.settings__edit {
+  font-size: 40px !important;
+  color: rgb(255, 255, 255) !important;
+  margin-bottom: -70px;
+  margin-left: 280px !important;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 0 rgba(214, 91, 91, 0.3) inset,
+    -2px -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.settings__container {
+  margin-top: -40px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
