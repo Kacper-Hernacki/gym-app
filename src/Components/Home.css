@@ -8,12 +8,12 @@
   max-width: 400px;
 }
 
-.home > h1 {
+.home > h3 {
   color: rgb(228, 227, 238);
   position: relative;
   text-align: center;
-  font-size: 50px;
-  text-shadow: 5px 5px #000000;
+  font-size: 40px;
+  text-shadow: 4px 4px #000000;
   margin-bottom: -90px;
 }
 

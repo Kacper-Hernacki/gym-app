@@ -1,18 +1,18 @@
 import { Avatar } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Settings.css';
 import SaveIcon from '@material-ui/icons/Save';
+import { selectUser } from '../features/userSlice';
+import { useSelector } from 'react-redux';
 
 function Settings() {
+  const user = useSelector(selectUser);
   return (
     <div className="settings">
       <h1>Settings</h1>
       <div className="settings__container">
         <SaveIcon className="settings__edit" />
-        <Avatar
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROwmKo-mfNn7czaAUDjzdXq8T4jTLB-hZGHw&usqp=CAU"
-          className="settings__avatar"
-        />
+        <Avatar src={user.photo} className="settings__avatar" />
         <div className="settings__data">
           <div className="settings__NameRow">
             <div className="settings__nameRowHeaders">
@@ -20,16 +20,8 @@ function Settings() {
               <h2>Age</h2>
             </div>
             <div className="settings__nameRowInputs">
-              <input
-                className="settings__input"
-                type="text"
-                placeholder="Kacper"
-              />
-              <input
-                className="settings__input"
-                type="number"
-                placeholder="25"
-              />
+              <input className="settings__input" type="text" placeholder="" />
+              <input className="settings__input" type="number" placeholder="" />
             </div>
           </div>
           <div className="settings__maxesRow">
@@ -40,7 +32,7 @@ function Settings() {
                 <input
                   className="settings__input"
                   type="number"
-                  placeholder="150"
+                  placeholder=""
                 />
               </div>
               <div className="settings__maxContainer">
@@ -48,7 +40,7 @@ function Settings() {
                 <input
                   className="settings__input"
                   type="number"
-                  placeholder="100"
+                  placeholder=""
                 />
               </div>
               <div className="settings__maxContainer">
@@ -56,7 +48,7 @@ function Settings() {
                 <input
                   className="settings__input"
                   type="number"
-                  placeholder="150"
+                  placeholder=""
                 />
               </div>
             </div>

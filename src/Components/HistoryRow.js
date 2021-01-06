@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './HistoryRow.css';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { useDispatch } from 'react-redux';
+import { setTraining } from '../features/trainingSlice';
 
-function HistoryRow() {
-  return (
-    <div className="historyRow">
-      <KeyboardArrowDownIcon />
-      <h2>Leg day</h2>
-      <h2>12.12.2020</h2>
-    </div>
-  );
-}
-
+const HistoryRow = forwardRef(
+  ({ id, contents: { timestamp, trainingName } }, ref) => {
+    const dispatch = useDispatch();
+    return (
+      <div
+        onClick={() =>
+          dispatch(
+            setTraining({
+              trainingId: id,
+              trainingName: trainingName,
+            })
+          )
+        }
+        ref={ref}
+        className="historyRow">
+        <h2>{trainingName}</h2>
+        <h2>{new Date(timestamp?.toDate()).toLocaleString()}</h2>
+      </div>
+    );
+  }
+);
 export default HistoryRow;

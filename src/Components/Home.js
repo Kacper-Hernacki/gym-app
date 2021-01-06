@@ -8,12 +8,15 @@ import Practice from './Practice';
 import Profile from './Profile';
 import Settings from './Settings';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function Home() {
+  const user = useSelector(selectUser);
   return (
     <Router>
       <div className="home">
-        <h1>Hello Kacper</h1>
+        <h3>The Grinder</h3>
         <div className="home__window">
           <Switch>
             <Route path="/settings">

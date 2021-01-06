@@ -2,13 +2,32 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 96%;
-  margin-left: 2%;
-  margin-right: 2%;
+  width: 84%;
+  margin-left: 6%;
+  margin-right: 10%;
+  flex-direction: column;
+  box-shadow: 2px 2px 6px 0 rgba(129, 26, 26, 0.3) inset,
+    -2px -2px 3px 0 rgba(119, 4, 4, 0.849) inset;
+  border-radius: 20px;
+  padding: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }
 
-.addRow > input {
-  width: 30px;
+.addRow__line {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -20px;
+}
+
+.addRow__line > h2 {
+  margin-right: 8px;
+}
+
+.addRow__number {
+  width: 50px;
   height: 20px;
   border: none;
   outline: none;
@@ -21,7 +40,24 @@
 }
 
 .addRow__exercise {
-  width: 100px !important;
+  width: 200px !important;
+}
+
+.addRow__button {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: rgba(197, 39, 39, 0.712);
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px 0 rgba(129, 26, 26, 0.3) inset,
+    -2px -2px 3px 0 rgba(119, 4, 4, 0.849) inset;
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin-top: 13px;
 }
 
 .addRow > input::placeholder {

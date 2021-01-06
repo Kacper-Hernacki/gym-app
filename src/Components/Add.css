@@ -1,23 +1,32 @@
 .add__container > h1 {
   text-align: center;
+  color: black !important;
 }
 
-.add__container > .MuiSvgIcon-root {
+.add__description {
+  display: flex;
+}
+
+.add__description > button {
   position: absolute;
-  bottom: 40px;
-  font-size: 30px;
-  padding: 7px;
-  width: 80%;
-  margin-left: 8%;
-  margin-right: 12%;
+  border: none;
+  right: 10px;
+  width: 70px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
   background-color: rgba(197, 39, 39, 0.712);
   border-radius: 20px;
   box-shadow: 2px 2px 6px 0 rgba(129, 26, 26, 0.3) inset,
     -2px -2px 3px 0 rgba(119, 4, 4, 0.849) inset;
   cursor: pointer;
+  margin-top: -10px;
 }
-
-.add__container > input {
+.add__container > #text {
+  color: white;
+}
+.add__input {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
@@ -30,6 +39,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .add__container > input::placeholder {
@@ -38,4 +48,32 @@
   font-size: 13px !important;
   font-weight: bold;
   opacity: 0.4;
+}
+
+.add__completed {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: rgba(161, 24, 24, 0.712);
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px 0 rgba(163, 66, 66, 0.3) inset,
+    -2px -2px 3px 0 rgba(29, 3, 3, 0.849) inset;
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin-top: 10px;
+}
+
+.add__exercises {
+  max-height: 190px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.add__exercises::-webkit-scrollbar {
+  display: none;
 }

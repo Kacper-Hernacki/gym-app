@@ -17,11 +17,25 @@ function LoginWindow() {
   return (
     <div className="loginWindow">
       <div className="loginWindow__buttons">
-        <button className="loginWindow__button">Login</button>
+        <Link
+          className="loginWindow__link"
+          style={{
+            color: 'inherit',
+            textDecoration: 'inherit',
+          }}
+          to="/login_page">
+          <button className="loginWindow__buttonLink">Login</button>
+        </Link>
+
         <button onClick={signIn} className="loginWindow__button">
           Sign In with Gmail
         </button>
-        <button className="loginWindow__button">Register</button>
+        <Link
+          className="loginWindow__link"
+          style={{ color: 'inherit', textDecoration: 'inherit' }}
+          to="/register">
+          <button className="loginWindow__buttonLink">Register</button>
+        </Link>
       </div>
     </div>
   );
