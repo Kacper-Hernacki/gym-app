@@ -3,13 +3,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: none;
   outline: none;
   background-color: rgba(167, 20, 20, 0.63);
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
 }

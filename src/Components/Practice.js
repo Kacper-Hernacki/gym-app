@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import './Practice.css';
 import PracticeRow from './PracticeRow';
-import firebase from 'firebase';
 import { db } from '../firebase';
 import { useSelector } from 'react-redux';
 import {
   selectTrainingId,
   selectTrainingName,
 } from '../features/trainingSlice';
+import DeleteIcon from '@material-ui/icons/Delete';
+import { selectUser } from '../features/userSlice';
 
 function Practice() {
+  const user = useSelector(selectUser);
   const trainingName = useSelector(selectTrainingName);
   const trainingId = useSelector(selectTrainingId);
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
     if (trainingId) {
-      db.collection('trainings')
+      db.collection('users')
+        .doc(user.uid)
+        .collection('trainings')
         .doc(trainingId)
         .collection('exercises')
         .onSnapshot((snapshot) =>
@@ -35,10 +39,21 @@ function Practice() {
 
   return (
     <div className="practice">
+      <DeleteIcon
+        className="practice__delete"
+        onClick={(event) =>
+          db
+            .collection('users')
+            .doc(user.uid)
+            .collection('trainings')
+            .doc(trainingId)
+            .delete()
+        }
+      />
       <h1>{trainingName}</h1>
       <div className="practice__container">
         {exercises?.map(({ id, data }) => (
-          <PracticeRow key={id} contents={data} />
+          <PracticeRow key={id} id={id} contents={data} />
         ))}
       </div>
     </div>

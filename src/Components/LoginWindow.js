@@ -1,17 +1,23 @@
 import React from 'react';
 import './LoginWindow.css';
 import { auth, provider } from '../firebase';
-import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { db } from '../firebase';
 
 function LoginWindow() {
   // login & register
-  const history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   const signIn = () => {
-    auth.signInWithPopup(provider).catch((error) => alert(error.message));
+    auth
+      .signInWithPopup(provider)
+      .then((cred) => {
+        return db.collection('users').doc(cred.user.uid).set({
+          name: cred.user.displayName,
+          id: cred.user.uid,
+        });
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (

@@ -54,8 +54,10 @@ input[type='number']::-webkit-outer-spin-button {
 .calculator__button {
   position: absolute;
   bottom: 40px;
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: bold;
   padding: 7px;
+  font-family: 'Kaushan Script', cursive;
   width: 80%;
   margin-left: 8%;
   margin-right: 12%;

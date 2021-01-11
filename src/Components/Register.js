@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Register.css';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 
 function Register() {
   const [password, setPassword] = useState('');
@@ -9,10 +9,12 @@ function Register() {
   const register = (event) => {
     event.preventDefault();
 
-    auth
-      .createUserWithEmailAndPassword(email, password)
-
-      .catch((error) => alert(error.message));
+    auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+      return db.collection('users').doc(cred.user.uid).set({
+        name: email,
+        id: cred.user.uid,
+      });
+    });
   };
 
   return (

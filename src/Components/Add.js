@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import './Add.css';
 import AddRow from './AddRow';
-import AddIcon from '@material-ui/icons/Add';
 import { db } from '../firebase';
 import firebase from 'firebase';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { useDispatch } from 'react-redux';
 import { setTraining } from '../features/trainingSlice';
 import FlipMove from 'react-flip-move';
 import PracticeRow from './PracticeRow';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function Add() {
+  const user = useSelector(selectUser);
   const [title, setTitle] = useState('');
   const [trainings, setTrainings] = useState([]);
   const [exercises, setExercises] = useState([]);
   const [completedName, setCompletedName] = useState(false);
-
-  console.log('CompletedName start >>>>>>>>>>>', completedName);
 
   const addTraining = (e) => {
     e.preventDefault();
@@ -24,7 +23,7 @@ function Add() {
     setCompletedName(true);
 
     if (trainingName) {
-      db.collection('trainings').add({
+      db.collection('users').doc(user.uid).collection('trainings').add({
         trainingName: trainingName,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
@@ -33,7 +32,9 @@ function Add() {
   };
 
   useEffect(() => {
-    db.collection('trainings')
+    db.collection('users')
+      .doc(user.uid)
+      .collection('trainings')
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) =>
         setTrainings(
@@ -44,16 +45,14 @@ function Add() {
         )
       );
   }, []);
-  console.log(trainings);
 
   const trainingId = trainings[0]?.id;
   const trainingName = trainings[0]?.data.trainingName;
 
-  console.log('ID >>>>>>>>>>>>  ', trainingId);
-  console.log('NAME >>>>>>>>>>>>>>>>>>   ', trainingName);
-
   useEffect(() => {
-    db.collection('trainings')
+    db.collection('users')
+      .doc(user.uid)
+      .collection('trainings')
       .doc(trainingId)
       .collection('exercises')
       .onSnapshot((snapshot) =>
@@ -71,10 +70,8 @@ function Add() {
 
   const finishTraining = (e) => {
     setCompletedName(false);
-    console.log('CompletedName  finished >>>>>>>>>>>', completedName);
   };
 
-  console.log('CompletedName  finished before divs >>>>>>>>>>>', completedName);
   return (
     <div className="add">
       <div className="add__container">

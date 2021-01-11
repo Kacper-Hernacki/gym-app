@@ -7,12 +7,9 @@ import Navbar from './Navbar';
 import Practice from './Practice';
 import Profile from './Profile';
 import Settings from './Settings';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { selectUser } from '../features/userSlice';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function Home() {
-  const user = useSelector(selectUser);
   return (
     <Router>
       <div className="home">

@@ -1,11 +1,28 @@
 .practiceRow {
   display: flex;
+  align-items: center;
+  background-color: rgba(167, 20, 20, 0.63);
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.practiceRow__data {
+  display: flex;
   justify-content: space-between;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: rgba(167, 20, 20, 0.63);
   margin-bottom: 5px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 90%;
+}
+
+.practiceRow__delete {
+  color: rgb(78, 10, 10);
+  cursor: pointer;
+  padding-right: 20px;
+  font-size: 30px !important;
 }

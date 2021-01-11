@@ -3,13 +3,17 @@ import './History.css';
 import HistoryRow from './HistoryRow';
 import { Link } from 'react-router-dom';
 import { db } from '../firebase';
-import firebase from 'firebase';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function History() {
+  const user = useSelector(selectUser);
   const [trainings, setTrainings] = useState([]);
 
   useEffect(() => {
-    db.collection('trainings')
+    db.collection('users')
+      .doc(user.uid)
+      .collection('trainings')
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) =>
         setTrainings(

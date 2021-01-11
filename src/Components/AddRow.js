@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './AddRow.css';
 import { db } from '../firebase';
 import { useSelector } from 'react-redux';
-import firebase from 'firebase';
 import { selectUser } from '../features/userSlice';
-import AddIcon from '@material-ui/icons/Add';
 
 function AddRow({ key, trainingId, trainingName }) {
   const user = useSelector(selectUser);
@@ -16,25 +14,23 @@ function AddRow({ key, trainingId, trainingName }) {
   const addExercise = (e) => {
     e.preventDefault();
     if (trainingId) {
-      db.collection('trainings').doc(trainingId).collection('exercises').add({
-        exercise: exercise,
-        sets: sets,
-        reps: reps,
-        weight: weight,
-      });
+      db.collection('users')
+        .doc(user.uid)
+        .collection('trainings')
+        .doc(trainingId)
+        .collection('exercises')
+        .add({
+          exercise: exercise,
+          sets: sets,
+          reps: reps,
+          weight: weight,
+        });
     }
 
     setExercise('');
     setSets('');
     setWeight('');
     setReps('');
-
-    console.log('IDDDD >>>>>>>>>>>>>> ', trainingId);
-    console.log('trainingName >>>>>>>>>>>>>> ', trainingName);
-    console.log('exercise >>>>>>>>>>>>>> ', exercise);
-    console.log('sets >>>>>>>>>>>>>> ', sets);
-    console.log('reps >>>>>>>>>>>>>> ', reps);
-    console.log('weight >>>>>>>>>>>>>> ', weight);
   };
 
   return (

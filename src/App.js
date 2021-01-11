@@ -7,7 +7,7 @@ import './App.css';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { auth } from './firebase';
+import { db, auth } from './firebase';
 
 function App() {
   const user = useSelector(selectUser);
@@ -25,6 +25,13 @@ function App() {
             displayName: authUser.displayName,
           })
         );
+
+        // db.collection('users').add({
+        //   user: authUser.displayName,
+        //   uid: authUser.uid,
+        //   photo: authUser.photoURL,
+        //   email: authUser.email,
+        // });
       } else {
         // user is logged out
         dispatch(logout());
