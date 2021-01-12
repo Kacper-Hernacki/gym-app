@@ -1,6 +1,6 @@
 .profile__avatar {
-  height: 100px !important;
-  width: 100px !important;
+  height: 90px !important;
+  width: 90px !important;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -58,4 +58,35 @@
   padding: 10px;
   box-shadow: inset 2px 2px 3px 0 rgba(83, 6, 6, 0.329),
     inset -2px -2px 3px 0 rgba(80, 3, 3, 0.397);
+}
+
+.profile__NameRow > h1 {
+  font-size: 23px;
+}
+
+.profile__maxesRow > h1 {
+  font-size: 23px;
+}
+
+.profile__maxContainer > h2 {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 415px) {
+  .profile__avatar {
+    height: 80px !important;
+    width: 80px !important;
+  }
+
+  .profile__NameRow > h1 {
+    font-size: 20px;
+  }
+
+  .profile__maxesRow > h1 {
+    font-size: 20px;
+  }
+
+  .profile__maxContainer > h2 {
+    font-size: 18px;
+  }
 }

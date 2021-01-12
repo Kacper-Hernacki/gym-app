@@ -18,6 +18,7 @@ function PracticeRow({ key, id, contents: { sets, reps, weight, exercise } }) {
         <h2>{reps} reps</h2>
         <h2>{weight} kg</h2>
       </div>
+
       <HighlightOffIcon
         className="practiceRow__delete"
         onClick={(event) =>

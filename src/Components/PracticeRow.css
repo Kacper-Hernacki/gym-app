@@ -20,9 +20,19 @@
   width: 90%;
 }
 
+.practiceRow__data > h2 {
+  font-size: 17px;
+}
+
 .practiceRow__delete {
   color: rgb(78, 10, 10);
   cursor: pointer;
   padding-right: 10px;
   font-size: 30px !important;
+}
+
+@media only screen and (max-width: 415px) {
+  .practiceRow__data {
+    width: 95%;
+  }
 }

@@ -9,6 +9,7 @@ import {
 } from '../features/trainingSlice';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { selectUser } from '../features/userSlice';
+import { Link } from 'react-router-dom';
 
 function Practice() {
   const user = useSelector(selectUser);
@@ -39,17 +40,22 @@ function Practice() {
 
   return (
     <div className="practice">
-      <DeleteIcon
-        className="practice__delete"
-        onClick={(event) =>
-          db
-            .collection('users')
-            .doc(user.uid)
-            .collection('trainings')
-            .doc(trainingId)
-            .delete()
-        }
-      />
+      <Link
+        style={{ color: 'inherit', textDecoration: 'inherit' }}
+        to="/history">
+        <DeleteIcon
+          className="practice__delete"
+          onClick={(event) =>
+            db
+              .collection('users')
+              .doc(user.uid)
+              .collection('trainings')
+              .doc(trainingId)
+              .delete()
+          }
+        />
+      </Link>
+
       <h1>{trainingName}</h1>
       <div className="practice__container">
         {exercises?.map(({ id, data }) => (

@@ -1,11 +1,12 @@
 .settings > h1 {
   text-align: center;
   margin-bottom: -10px;
+  font-size: 23px;
 }
 
 .settings__avatar {
-  height: 100px !important;
-  width: 100px !important;
+  height: 90px !important;
+  width: 90px !important;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -171,4 +172,42 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-@media only screen and (max-width: 1621px) {}
+.settings__nameRowHeaders > h2 {
+  font-size: 20px;
+}
+
+.settings__maxesRow > h1 {
+  font-size: 23px;
+}
+
+.settings__maxContainer > h2 {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 415px) {
+  .settings > h1 {
+    font-size: 20px;
+  }
+
+  .settings__avatar {
+    height: 80px !important;
+    width: 80px !important;
+  }
+
+  .settings__nameRowHeaders > h2 {
+    font-size: 18px;
+  }
+
+  .settings__maxesRow > h1 {
+    font-size: 20px;
+  }
+
+  .settings__maxContainer > h2 {
+    font-size: 18px;
+  }
+
+  .settings__nameRowInputs > input {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}

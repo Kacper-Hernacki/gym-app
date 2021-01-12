@@ -24,6 +24,7 @@
 
 .addRow__line > h2 {
   margin-right: 6px;
+  font-size: 15px;
 }
 
 .addRow__number {
@@ -78,4 +79,19 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media only screen and (max-width: 415px) {
+  .addRow__number {
+    width: 40px;
+  }
+
+  .addRow__line > h2 {
+    font-size: 13px;
+  }
+
+  .addRow__line {
+    width: 100%;
+    margin-bottom: -10px;
+  }
 }
