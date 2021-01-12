@@ -82,8 +82,9 @@ function Profile() {
               <h2>{userData[0]?.data.deadlift} kg</h2>
             </div>
           </div>
-
-          <h2>Total: {squatNumber + deadliftNumber + benchNumber} kg</h2>
+          {userData[0] && (
+            <h2>Total: {squatNumber + deadliftNumber + benchNumber} kg</h2>
+          )}
         </div>
       </div>
     </div>
