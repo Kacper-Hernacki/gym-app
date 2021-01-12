@@ -11,8 +11,8 @@
 .practiceRow__data {
   display: flex;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 5px;
   border-radius: 20px;
   margin-left: 0px;
@@ -23,6 +23,6 @@
 .practiceRow__delete {
   color: rgb(78, 10, 10);
   cursor: pointer;
-  padding-right: 20px;
+  padding-right: 10px;
   font-size: 30px !important;
 }

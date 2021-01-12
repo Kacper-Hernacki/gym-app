@@ -9,6 +9,7 @@ import FlipMove from 'react-flip-move';
 import PracticeRow from './PracticeRow';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/userSlice';
+import AddedRow from './AddedRow';
 
 function Add() {
   const user = useSelector(selectUser);
@@ -100,7 +101,7 @@ function Add() {
           <div className="add__exercises">
             <FlipMove>
               {exercises?.map(({ id, data }) => (
-                <PracticeRow key={id} contents={data} />
+                <AddedRow key={id} contents={data} />
               ))}
             </FlipMove>
           </div>

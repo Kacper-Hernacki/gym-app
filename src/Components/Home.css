@@ -29,3 +29,40 @@
   box-shadow: 12px 12px 16px 0 rgb(233, 85, 85) inset,
     -8px -8px 12px 0 rgba(149, 43, 43, 0.986) inset;
 }
+
+@media only screen and (max-width: 415px) {
+  .home {
+    height: 100vh;
+    border-radius: 0;
+    max-width: 415px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .home__window {
+    margin-top: 35%;
+  }
+}
+
+@media handheld, (max-width: 415px), (max-height: 734px) {
+  .home {
+    height: 100vh;
+    border-radius: 0;
+    max-width: 415px;
+  }
+  .home__window {
+    height: 485px;
+    border-radius: 20px;
+    width: 90%;
+  }
+
+  .home > h3 {
+    color: rgb(228, 227, 238);
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 4px 4px #000000;
+    margin-bottom: -103px;
+    margin-top: 10px;
+  }
+}

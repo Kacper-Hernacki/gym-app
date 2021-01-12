@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 function Calculator() {
-  const [count, setCount] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [reps, setReps] = useState(0);
+  const [count, setCount] = useState();
+  const [weight, setWeight] = useState();
+  const [reps, setReps] = useState();
 
   function oneRepMax() {
     setCount((weight * (36 / (37 - reps))).toFixed(2));

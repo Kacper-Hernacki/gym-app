@@ -41,17 +41,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        {user ? <Home /> : <Login />}
-        {/* <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/">
-            <Login />
-          </Route>
-        </Switch> */}
-      </div>
+      <div className="app">{user ? <Home /> : <Login />}</div>
     </Router>
   );
 }
